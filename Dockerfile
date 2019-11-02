@@ -1,6 +1,6 @@
 FROM frolvlad/alpine-python-machinelearning
 RUN echo "|--> Updating" \
-    && apk update && apk add --no-cache git linux-headers build-base cmake \
+    && apk update && apk add --no-cache git libexecinfo-dev linux-headers build-base cmake \
     && pip install --no-cache-dir pyyaml \
     && echo "|--> Install PyTorch" \
     && git clone --recursive https://github.com/pytorch/pytorch \
